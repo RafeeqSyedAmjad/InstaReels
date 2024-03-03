@@ -34,3 +34,32 @@
     left: 143px;
     top: 93px;
 }
+
+
+/* For mobile devices (up to 767px) */
+@media only screen and (max-width: 767px) {
+  /* Your styles for mobile devices here */
+  .loginWrapper{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imgcar{
+    height: 310px;
+    width: 220px;
+  }
+
+  .carousel-wrapper {
+    /* height: 20px; */
+    width: 125px;
+    position: absolute;
+    left: 73px;
+    top: 43px;
+  }
+
+  .loginCard {
+    width: 80vw;
+    margin-top: 3rem;
+}
+
+}
