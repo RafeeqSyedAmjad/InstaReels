@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react'
-import { database } from '../firebase';
+import { database } from '../../firebase';
 import CircularProgress from '@mui/material/CircularProgress';
-import Video from './Video'
-import Like from './like'
+import Video from '../Video/Video'
+import Like from '../like/like'
 import './Post.css'
 import Avatar from '@mui/material/Avatar';
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import Dialog from '@mui/material/Dialog';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
-import Like2 from './Like2';
-import AddComment from './AddComment';
-import Comments from './Comments';
+import Like2 from '../like2/Like2';
+import AddComment from '../AddComment/AddComment';
+import Comments from '../Comments/Comments';
 
 function Post({ userData }) {
     const [posts, setPosts] = useState(null);
@@ -62,7 +62,7 @@ function Post({ userData }) {
         return () => {
             observer.disconnect();
         }
-    }, [posts])
+    },)
 
     return (
         <div>
@@ -82,7 +82,7 @@ function Post({ userData }) {
                                         <Like userData={userData} postData={post} />
                                         <ChatBubbleIcon className="chat-styling" onClick={() => handleClickOpen(post.pId)} />
                                         <Dialog
-                                            open={open == post.pId}
+                                            open={open === post.pId}
                                             onClose={handleClose}
                                             aria-labelledby="alert-dialog-title"
                                             aria-describedby="alert-dialog-description"
@@ -100,7 +100,7 @@ function Post({ userData }) {
                                                         <Comments postData={post} />
                                                     </Card>
                                                     <Card variant="outlined" className="card2">
-                                                        <Typography style={{ padding: '0.4rem' }}>{post.likes.length == 0 ? 'Liked by nobody' : `Liked by ${post.likes.length} users`}</Typography>
+                                                        <Typography style={{ padding: '0.4rem' }}>{post.likes.length === 0 ? 'Liked by nobody' : `Liked by ${post.likes.length} users`}</Typography>
                                                         <div style={{ display: 'flex' }}>
                                                             <Like2 postData={post} userData={userData} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} />
                                                             <AddComment style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} userData={userData} postData={post} />

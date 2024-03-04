@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import MovieIcon from '@mui/icons-material/Movie';
 import LinearProgress from '@mui/material/LinearProgress';
 import { v4 as uuidv4 } from 'uuid'
-import { database, storage } from '../firebase';
+import { database, storage } from '../../firebase';
 
 function UploadFile(props) {
     const [error, setError] = useState('');
@@ -55,9 +55,9 @@ function UploadFile(props) {
                     createdAt: database.getTimeStamp()
                 }
                 database.posts.add(obj).then(async (ref) => {
-                    let res = await database.users.doc(props.user.userId).update({
-                        postIds: props.user.postIds != null ? [...props.user.postIds, ref.id] : [ref.id]
-                    })
+                    // let res = await database.users.doc(props.user.userId).update({
+                    //     postIds: props.user.postIds != null ? [...props.user.postIds, ref.id] : [ref.id]
+                    // })
                 }).then(() => {
                     setLoading(false)
                 }).catch((err) => {

@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { database } from '../firebase'
+import { database } from '../../firebase'
 import { CircularProgress } from '@mui/material';
-import Navbar from './Navbar'
+import Navbar from '../../Components/Navbar/Navbar'
 import Typography from '@mui/material/Typography';
 // import Avatar from '@mui/material/Avatar';
 // import Like from './like'
 // import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import Dialog from '@mui/material/Dialog';
 import Card from '@mui/material/Card';
-import Like2 from './Like2';
-import AddComment from './AddComment';
-import Comments from './Comments'
+import Like2 from '../../Components/like2/Like2';
+import AddComment from '../../Components/AddComment/AddComment';
+import Comments from '../../Components/Comments/Comments'
 import './Profile.css'
 
 function Profile() {
@@ -52,7 +52,7 @@ function Profile() {
             setPosts(parr)
         })
         return unsub
-    }, [userData])
+    },)
 
     // useEffect(()=>{
     //     if(userData!=null){

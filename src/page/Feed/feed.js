@@ -1,9 +1,9 @@
 import React, { useContext, useState, useEffect } from 'react'
-import { AuthContext } from '../Context/AuthContext'
-import { database } from '../firebase'
-import UploadFile from './UploadFile'
-import Post from './Post'
-import Navbar from './Navbar'
+import { AuthContext } from '../../Context/AuthContext'
+import { database } from '../../firebase'
+import UploadFile from '../../Components/UploadFile/UploadFile'
+import Post from '../../Components/Post/Post'
+import Navbar from '../../Components/Navbar/Navbar'
 
 function Feed() {
   const { user } = useContext(AuthContext)

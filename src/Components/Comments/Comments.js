@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import CircularProgress from '@mui/material/CircularProgress';
 import Avatar from '@mui/material/Avatar';
-import { database } from '../firebase'
+import { database } from '../../firebase'
 
 function Comments({ postData }) {
     const [comments, setComments] = useState(null)

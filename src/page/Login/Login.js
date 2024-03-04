@@ -7,7 +7,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import './Login.css';
-import Instagram from '../Assets/ENREEL.png'
+import Instagram from '../../Assets/ENREEL.png'
 import { createUseStyles } from 'react-jss';
 import Alert from '@mui/material/Alert';
 // import { border } from '@mui/system';
@@ -17,12 +17,12 @@ import { Link, useNavigate } from 'react-router-dom';
 // import { ClassNames } from '@emotion/react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import bg from '../Assets/insta.png'
-import img1 from '../Assets/img1.jpg';
-import img2 from '../Assets/img2.jpg';
-import img3 from '../Assets/img3.jpg';
-import img5 from '../Assets/img5.jpg';
-import { AuthContext } from '../Context/AuthContext';
+import bg from '../../Assets/insta.png'
+import img1 from '../../Assets/img1.jpg';
+import img2 from '../../Assets/img2.jpg';
+import img3 from '../../Assets/img3.jpg';
+import img5 from '../../Assets/img5.jpg';
+import { AuthContext } from '../../Context/AuthContext';
 
 export default function Login() {
     // const store = useContext(AuthContext)

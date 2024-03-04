@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { database } from '../firebase';
+import { database } from '../../firebase';
 
 function AddComment({ userData, postData }) {
     const [text, setText] = useState('')
